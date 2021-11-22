@@ -10,6 +10,7 @@ def test_adauga_rezervare():
     assert get_pret(get_by_id("1", lista)) == 100
     assert get_checkin(get_by_id("1", lista)) == "da"
 
+
 def test_sterge_rezervare():
     lista = []
     lista = adaugaRezervare("1", "X", "economy", 100, "da", lista)

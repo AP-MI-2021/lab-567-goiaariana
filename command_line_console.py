@@ -1,5 +1,6 @@
 from ui import *
 
+
 def help():
     print("Daca doriti sa adaugati o rezervare, tastati in primul rand '1', iar mai apoi "
           "despartite printr-o virgula si fara spatii intre ele: "
@@ -12,6 +13,7 @@ def help():
     print("Daca doriti sa efectuati mai multe comenzi deodata, dati valorile asa cum este specificat mai sus, "
           "iar intre doua comenzi,tastati ';'")
     print("Daca doriti sa va opriti tastati 'x'")
+
 
 def menu(lista):
     ajutor = input("Daca aveti nevoie de ajutor, tastati 'ajutor': ")

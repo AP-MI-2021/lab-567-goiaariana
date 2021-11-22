@@ -1,6 +1,9 @@
 from copy import deepcopy
+
 from CRUD import *
 from logic import *
+
+
 
 def printMenu():
     print("1.Adaugare rezervare")
@@ -15,6 +18,7 @@ def printMenu():
     print("r.Redo")
     print("a.Afisare rezervari")
     print("x.Iesire")
+
 
 def uiAdaugaRezervare(lista, undoLista, redoLista):
     try:
@@ -38,6 +42,7 @@ def uiAdaugaRezervare(lista, undoLista, redoLista):
         print("Eroare : {}".format(ve))
         return lista
 
+
 def uiStergeRezervare(lista, undoLista, redoLista):
     try:
         id = input("Dati id-ul rezervarii de sters: ")
@@ -48,6 +53,7 @@ def uiStergeRezervare(lista, undoLista, redoLista):
     except ValueError as ve:
         print("Eroare : {}".format(ve))
         return lista
+
 
 def uiModificaRezervare(lista, undoLista, redoLista):
     try:
@@ -64,6 +70,7 @@ def uiModificaRezervare(lista, undoLista, redoLista):
         print("Eroare : {}".format(ve))
         return lista
 
+
 def uiUpperClass(lista, undoLista, redoLista):
     try:
         nume = input("Dati numele pe care sunt facute rezervarile:")
@@ -75,6 +82,7 @@ def uiUpperClass(lista, undoLista, redoLista):
     except ValueError as ve:
         print("Eroare : {}".format(ve))
         return lista
+
 
 def uiReducere(lista, undoLista, redoLista):
     try:
@@ -88,11 +96,14 @@ def uiReducere(lista, undoLista, redoLista):
     except ValueError as ve:
         print("Eroare : {}".format(ve))
 
+
+
 def uiMaxim_pe_clase(lista):
     x, y, z = maxim_pe_clase(lista)
     print("economy: ", x)
     print("economy plus", y)
     print("business", z)
+
 
 def uiOrdonare(lista, undoLista, redoLista):
     rezultat = ordonare(lista)
@@ -100,15 +111,18 @@ def uiOrdonare(lista, undoLista, redoLista):
     redoLista.clear()
     return rezultat
 
+
 def uiSumaPreturi(lista):
     print("Nume:", "\t\tTotal")
     x, y = sumapreturi(lista)
     for i in range(len(x)):
         print(x[i], "\t\t", y[i])
 
+
 def showAll(lista):
     for rezervare in range(len(lista)):
         print(toString(lista[rezervare]))
+
 
 def runMenu(lista):
     undoLista = []

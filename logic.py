@@ -1,5 +1,7 @@
 from domain import *
 
+
+
 def upperclass(nume, lista):
     ok = 0
     for i in range(len(lista)):
@@ -15,6 +17,7 @@ def upperclass(nume, lista):
         raise ValueError("Nu exista nici o rezervare pe acest nume!")
     return lista
 
+
 def reducere(lista, p):
     lista_aux = []
     for i in range(len(lista)):
@@ -25,6 +28,7 @@ def reducere(lista, p):
         if get_checkin(lista_aux[i]) == 'da':
             set_pret(lista_aux[i], get_pret(lista_aux[i]) - p / 100 * get_pret(lista_aux[i]))
     return lista_aux
+
 
 def maxim_pe_clase(lista):
     max_economy = 0
@@ -45,6 +49,7 @@ def maxim_pe_clase(lista):
                 max_business = pret_rez
     return max_economy, max_economy_plus, max_business
 
+
 def ordonare(lista):
     lista_aux = []
     undoLista = []
@@ -60,6 +65,7 @@ def ordonare(lista):
                 lista_aux[j] = lista_aux[i]
                 lista_aux[i] = rez_aux
     return lista_aux
+
 
 def sumapreturi(lista):
     nume_rezervari = []

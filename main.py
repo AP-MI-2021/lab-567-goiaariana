@@ -2,6 +2,7 @@ from testAll import *
 from ui import runMenu
 from command_line_console import menu
 
+
 def main():
     runAllTests()
     x = input("Ce meniu doriti sa folositi:\n"

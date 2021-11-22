@@ -1,6 +1,7 @@
 from ui import *
 from domain import get_id
 
+
 def test_undo_redo():
     # 1. lista initiala goala
     lista = []

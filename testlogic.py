@@ -2,6 +2,7 @@ from CRUD import adaugaRezervare
 from logic import upperclass, reducere, maxim_pe_clase, ordonare, sumapreturi
 from domain import get_clasa, get_pret, get_id, get_nume
 
+
 def testUpperClass():
     lista = []
     lista = adaugaRezervare("1", "andrei", "economy", 100, "da", lista)
@@ -11,6 +12,7 @@ def testUpperClass():
     assert get_clasa(lista[0]) == 'economy plus'
     assert get_clasa(lista[1]) == 'business'
 
+
 def testReducere():
     lista = []
     lista = adaugaRezervare("1", "X", "economy", 100, "da", lista)
@@ -18,6 +20,7 @@ def testReducere():
     rezultat = reducere(lista, 10)
     assert get_pret(rezultat[0]) == 90
     assert get_pret(rezultat[1]) == 150
+
 
 def testMaximPeClase():
     lista = []
@@ -29,6 +32,7 @@ def testMaximPeClase():
     assert rezultat[1] == 150
     assert rezultat[2] == 200
 
+
 def testOrdonare():
     lista = []
     lista = adaugaRezervare("1", "X", "economy", 100, "da", lista)
@@ -39,6 +43,7 @@ def testOrdonare():
     assert get_pret(rezultat[0]) == 200
     assert get_nume(rezultat[1]) == "Y"
     assert get_id(rezultat[2]) == "1"
+
 
 def testSumaPreturi():
     lista = []

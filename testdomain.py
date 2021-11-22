@@ -1,5 +1,6 @@
 from domain import *
 
+
 def testRezervare():
     rezervare = creeazaRezervare("1", "X", "economy", 100, "da")
     assert get_id(rezervare) == "1"
